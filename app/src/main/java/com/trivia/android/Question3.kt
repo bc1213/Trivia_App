@@ -36,7 +36,7 @@ class Question3 : AppCompatActivity() {
         val data = intent.getStringExtra(TriviaConstants.USERNAME)?.let {
             getSelectedColors()?.let { it1 ->
                 Report(userName = it, colorSelected = it1,
-                    crickter = intent.getStringExtra(TriviaConstants.CRICKETER)!!, dateTime = Calendar.getInstance().time.toString())
+                    crickter = intent.getStringExtra(TriviaConstants.CRICKETER)!!, dateTime = TriviaConstants.dateformat.format(Calendar.getInstance().time).toString())
             }
         }
 
